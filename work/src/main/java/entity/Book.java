@@ -16,17 +16,10 @@ public class Book {
 	private int id;
 	private String name;
 	private int sex;
-
 	private int typeid;
-	
-	
-
-
 	public Book() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	public Book(String name) {
 		super();
 		this.name = name;

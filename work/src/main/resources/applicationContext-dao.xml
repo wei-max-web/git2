@@ -32,8 +32,6 @@
 	<!-- sqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations" value="classpath:dao/**.xml"></property>
-
 	</bean>
 
 	<!-- 扫描mapper（dao）包 -->
@@ -41,6 +39,7 @@
 		<property name="basePackage" value="dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
+	
 
 	<!-- transactionManager -->
 	<bean id="transactionManager"

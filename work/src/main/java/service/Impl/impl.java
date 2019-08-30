@@ -18,4 +18,20 @@ public class impl implements bService {
 		return dao.select(txt);
 	}
 
+	public void delete(int id) {
+		 dao.delete(id);
+		
+	}
+
+	public void insert(Book b) {
+		dao.insert(b);
+		
+	}
+
+	public void update(Book b) {
+		dao.update(b);
+		
+	}
+
+
 }

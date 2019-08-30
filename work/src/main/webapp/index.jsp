@@ -7,20 +7,27 @@
 td{
 width: 100px;
 }
+.g{
+width: 50px;
+}
 </style>
 </head>
 <body>
+<a href="add.jsp">新增</a>
+</form>
 <form action="index" method="post">
 <input name ="name">
 <input type="submit" value="名字查询">
-</form>
-
 <table>
 <tr><td>id</td><td>name</td><td>sex</td><td>typename</td></tr>
 <c:forEach items="${list}" var="x" varStatus="v">
-<tr> <td>${v.index}</td><td>${x.name}</td>
-<td>${x.sexname}</td><td>${x.typename}</td></tr>
+<tr><td>${v.index}</td><td>${x.name}</td><td>${x.sexname}</td><td>${x.typename}</td>
+<td class="g"><a href="delete?id=${x.id}">删除</a></td>
+<td class="g"><a href="edit?id=${x.id}">修改</a></td>
+</tr>
+
 </c:forEach>
 </table>
+</form>
 </body>
 </html>
